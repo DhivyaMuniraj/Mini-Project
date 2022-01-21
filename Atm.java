@@ -1,5 +1,4 @@
 import java.util.*;
-
 public class Atm{
     static int a = 0;
     static Scanner sc = new Scanner(System.in);
@@ -7,12 +6,10 @@ public class Atm{
     static ArrayList<Integer> with = new ArrayList<>();
     static ArrayList<Integer> integer = new ArrayList<>();
     static ArrayList<String> str = new ArrayList<>();
-
     static void addMoney() {
         System.out.println("avalaible balance is");
         System.out.println("2000,500,200,100");
-
-        for (int i = 0; i < 4; i++) {
+      for (int i = 0; i < 4; i++) {
             arr[i] = sc.nextInt();
         }
         for (int i = 0; i < arr.length; i++) {
@@ -29,8 +26,7 @@ public class Atm{
         }
         System.out.println("Your amount " + a + " is added successfully");
     }
-
-    static void showMoney() {
+ static void showMoney() {
         for (int i = 0; i < arr.length; i++) {
             if (i == 0) {
                 System.out.println("No.of 2000 rupees " + arr[0]);
@@ -41,13 +37,11 @@ public class Atm{
             } else if (i == 3) {
                 System.out.println("No.of 100 rupees " + arr[3]);
             }
-
-        }
+     }
         System.out.println("Total Amount is " + a);
     }
 
     static int tra[] = { 0, 0, 0, 0 };
-
     static void note(int w) {
         if (w / 2000 != 0) {
             tra[0] = w / 2000;
@@ -70,14 +64,12 @@ public class Atm{
             arr[3] = arr[3] - tra[3];
         }
     }
-
     static int avalaibleBalance = 20000;
     static int store;
     static int count = 1;
     static int w;
     static int mini[];
-
-    static void withdraw() {
+  static void withdraw() {
         System.out.println("Enter the amount you want to withdraw");
         w = sc.nextInt();
         if (w < avalaibleBalance && w <= a) {
@@ -104,10 +96,8 @@ public class Atm{
             if (k.equals("y")) {
                 viewBalance();
             }
-
         }
-
-        else {
+else {
             System.out.println("The amount you enter is not avalaible");
         }
     }
@@ -128,8 +118,7 @@ public class Atm{
 
         }
     }
-
-    static void pinChange() {
+  static void pinChange() {
         System.out.println("Enter your current pin");
         int pin = sc.nextInt();
         if (pin == checkPin) {
